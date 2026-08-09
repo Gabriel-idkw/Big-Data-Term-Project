@@ -7,6 +7,7 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
+import matplotlib.ticker as mticker
 from . import config
 
 sns.set_style("whitegrid")
@@ -39,15 +40,30 @@ def q2_seasonality(category_month_revenue: pd.DataFrame) -> dict:
     rolling_avg = monthly_revenue.rolling(window=3).mean()
 
     fig, ax = plt.subplots(figsize=(11, 5.5))
-    ax.plot(range(len(monthly_revenue)), monthly_revenue.values, marker="o", markersize=4,
-            color="#4C72B0", linewidth=1, alpha=0.45, label="Monthly Revenue")
-    ax.plot(range(len(rolling_avg)), rolling_avg.values, linewidth=2.5, color="darkred",
-            label="3-Month Rolling Average")
-    ax.set_title("Monthly Revenue with Rolling Average (Seasonality Check)")
-    ax.set_ylabel("Revenue ($)")
-    ax.set_xticks(range(len(monthly_revenue)))
-    ax.set_xticklabels([d.strftime("%Y-%m") for d in monthly_revenue.index], rotation=45)
-    ax.legend(loc="upper left")
+    ax.plot(monthly_revenue.index, monthly_revenue.values, marker="o", markersize=4,
+            color="#4C72B0", linewidth=1, alpha=0.45, label="Monthly Revenue", zorder=1)
+    ax.plot(rolling_avg.index, rolling_avg.values, linewidth=2.5, color="darkred",
+            label="3-Month Rolling Average", zorder=2)
+    ax.yaxis.set_major_formatter(mticker.FuncFormatter(lambda x, _: f"${x:,.0f}"))
+    ax.set_ylim(bottom=0)
+    peak_idx = monthly_revenue.idxmax()
+    trough_idx = monthly_revenue.idxmin()
+    ax.annotate(f"${monthly_revenue[peak_idx]:,.0f}",
+                xy=(peak_idx, monthly_revenue[peak_idx]),
+                xytext=(0, 10), textcoords="offset points",
+                ha="center", fontsize=9, fontweight="bold", color="#2c5aa0")
+    ax.annotate(f"${monthly_revenue[trough_idx]:,.0f}",
+                xy=(trough_idx, monthly_revenue[trough_idx]),
+                xytext=(0, -15), textcoords="offset points",
+                ha="center", fontsize=9, fontweight="bold", color="#2c5aa0")
+    ax.set_xticks(monthly_revenue.index)
+    ax.set_xticklabels([d.strftime("%Y-%m") for d in monthly_revenue.index], rotation=45, ha="right", fontsize=8)
+
+    ax.set_title("Monthly Revenue with Rolling Average (Seasonality Check)", fontsize=13, fontweight="bold")
+    ax.set_ylabel("Revenue ($)", fontsize=11)
+    ax.legend(loc="upper left", framealpha=0.9)
+    ax.grid(True, alpha=0.3)
+
     plt.tight_layout()
     plt.savefig(config.FIGURES / "q2_seasonality.png", dpi=150)
     plt.close(fig)
