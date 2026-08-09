@@ -1,0 +1,228 @@
+{
+  "q1": {
+    "segment_revenue": {
+      "Champions": 3631510.189,
+      "Loyal": 2714330.2215,
+      "At Risk": 949469.327,
+      "Lost": 274178.2355
+    },
+    "demographics": {
+      "avg_age": {
+        "At Risk": 44.71,
+        "Champions": 45.93,
+        "Lost": 44.35,
+        "Loyal": 45.48
+      },
+      "top_country": {
+        "At Risk": "USA",
+        "Champions": "USA",
+        "Lost": "USA",
+        "Loyal": "USA"
+      },
+      "pct_female": {
+        "At Risk": 0.49,
+        "Champions": 0.41,
+        "Lost": 0.51,
+        "Loyal": 0.48
+      }
+    }
+  },
+  "q2": {
+    "seasonal_avg_by_month": {
+      "November": 273695.74383333337,
+      "May": 261931.50483333334,
+      "August": 233385.13083333336,
+      "September": 225931.86399999997,
+      "June": 225514.02399999998,
+      "December": 214275.5485,
+      "July": 204414.41566666667,
+      "October": 201626.76866666667,
+      "March": 192877.80933333337,
+      "January": 171500.2315,
+      "April": 166339.32683333333,
+      "February": 151670.28966666668
+    }
+  },
+  "q3": {
+    "category_margin_pct": {
+      "Books & Media": 77.95323926910652,
+      "Beauty & Health": 70.92062073252528,
+      "Electronics": 52.600869664446456,
+      "Sports & Outdoors": 50.4508836964772,
+      "Apparel": 48.92007922502657,
+      "Home & Kitchen": 47.49067646254674
+    }
+  },
+  "q4": {
+    "correlation": 0.03610363109372387,
+    "avg_rating_by_group": {
+      "false": 3.925268817204301,
+      "true": 3.955826017557861
+    }
+  },
+  "q5": {
+    "top_combinations": [
+      {
+        "device": "tablet",
+        "country": "Singapore",
+        "session_customers": 148,
+        "purchasers": 134,
+        "conversion_rate": 0.9054054054054054,
+        "label": "tablet / Singapore"
+      },
+      {
+        "device": "mobile",
+        "country": "Singapore",
+        "session_customers": 136,
+        "purchasers": 123,
+        "conversion_rate": 0.9044117647058824,
+        "label": "mobile / Singapore"
+      },
+      {
+        "device": "mobile",
+        "country": "Thailand",
+        "session_customers": 133,
+        "purchasers": 120,
+        "conversion_rate": 0.9022556390977443,
+        "label": "mobile / Thailand"
+      },
+      {
+        "device": "desktop",
+        "country": "Thailand",
+        "session_customers": 131,
+        "purchasers": 118,
+        "conversion_rate": 0.9007633587786259,
+        "label": "desktop / Thailand"
+      },
+      {
+        "device": "tablet",
+        "country": "Thailand",
+        "session_customers": 133,
+        "purchasers": 119,
+        "conversion_rate": 0.8947368421052632,
+        "label": "tablet / Thailand"
+      },
+      {
+        "device": "desktop",
+        "country": "Australia",
+        "session_customers": 295,
+        "purchasers": 262,
+        "conversion_rate": 0.888135593220339,
+        "label": "desktop / Australia"
+      },
+      {
+        "device": "tablet",
+        "country": "Germany",
+        "session_customers": 268,
+        "purchasers": 238,
+        "conversion_rate": 0.8880597014925373,
+        "label": "tablet / Germany"
+      },
+      {
+        "device": "desktop",
+        "country": "Singapore",
+        "session_customers": 141,
+        "purchasers": 125,
+        "conversion_rate": 0.8865248226950354,
+        "label": "desktop / Singapore"
+      },
+      {
+        "device": "desktop",
+        "country": "USA",
+        "session_customers": 409,
+        "purchasers": 359,
+        "conversion_rate": 0.8777506112469438,
+        "label": "desktop / USA"
+      },
+      {
+        "device": "tablet",
+        "country": "Canada",
+        "session_customers": 258,
+        "purchasers": 226,
+        "conversion_rate": 0.875968992248062,
+        "label": "tablet / Canada"
+      }
+    ]
+  },
+  "q6": {
+    "r_squared": 0.6674369211635397,
+    "forecast": [
+      {
+        "month_index": 36,
+        "point_forecast": 343660.2744722221,
+        "lower_95": 231011.9240882125,
+        "upper_95": 456308.6248562317
+      },
+      {
+        "month_index": 37,
+        "point_forecast": 350870.90796771756,
+        "lower_95": 237729.9239635692,
+        "upper_95": 464011.8919718659
+      }
+    ]
+  },
+  "q7": {
+    "top5_stockout_risk": [
+      {
+        "product_id": 300.0,
+        "stock": 0.0,
+        "mean_monthly_demand": 1.9,
+        "stockout_probability": 0.9654,
+        "ci_95_lower": 0.9603,
+        "ci_95_upper": 0.9705,
+        "recommended_reorder_point": 3.7,
+        "name": "Those Non-Fiction",
+        "category": "Books & Media"
+      },
+      {
+        "product_id": 222.0,
+        "stock": 3.0,
+        "mean_monthly_demand": 2.0,
+        "stockout_probability": 0.1504,
+        "ci_95_lower": 0.1405,
+        "ci_95_upper": 0.1603,
+        "recommended_reorder_point": 3.6,
+        "name": "Car Supplement",
+        "category": "Beauty & Health"
+      },
+      {
+        "product_id": 105.0,
+        "stock": 4.0,
+        "mean_monthly_demand": 2.1,
+        "stockout_probability": 0.1292,
+        "ci_95_lower": 0.1199,
+        "ci_95_upper": 0.1385,
+        "recommended_reorder_point": 4.9,
+        "name": "Physical Footwear",
+        "category": "Apparel"
+      },
+      {
+        "product_id": 9.0,
+        "stock": 5.0,
+        "mean_monthly_demand": 2.1,
+        "stockout_probability": 0.0118,
+        "ci_95_lower": 0.0088,
+        "ci_95_upper": 0.0148,
+        "recommended_reorder_point": 4.2,
+        "name": "Right Laptop",
+        "category": "Electronics"
+      },
+      {
+        "product_id": 127.0,
+        "stock": 6.0,
+        "mean_monthly_demand": 2.2,
+        "stockout_probability": 0.0018,
+        "ci_95_lower": 0.0006,
+        "ci_95_upper": 0.003,
+        "recommended_reorder_point": 4.5,
+        "name": "Research Footwear",
+        "category": "Apparel"
+      }
+    ]
+  },
+  "q8": {
+    "naive_total": 12968797.333,
+    "cleaned_total": 7569487.972999999,
+    "pct_overstatement": 71.32991530284583
+  }
+}

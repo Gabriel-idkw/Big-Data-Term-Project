@@ -1,0 +1,6 @@
+product_id,stock,mean_monthly_demand,stockout_probability,ci_95_lower,ci_95_upper,recommended_reorder_point,name,category
+300.0,0.0,1.9,0.9654,0.9603,0.9705,3.7,Those Non-Fiction,Books & Media
+222.0,3.0,2.0,0.1504,0.1405,0.1603,3.6,Car Supplement,Beauty & Health
+105.0,4.0,2.1,0.1292,0.1199,0.1385,4.9,Physical Footwear,Apparel
+9.0,5.0,2.1,0.0118,0.0088,0.0148,4.2,Right Laptop,Electronics
+127.0,6.0,2.2,0.0018,0.0006,0.003,4.5,Research Footwear,Apparel
