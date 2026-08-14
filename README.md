@@ -5,7 +5,7 @@ discipline: one member led the technical/analytical build, the other
 led the written and presentation deliverables. Both members reviewed
 and signed off on the final report, deck, and executive summary.
 
-## [Your Name] — Coding & Visualization
+## Chang Tong — Coding & Visualization
 
 - Wrote and ran the SQL extraction queries against `ecommerce.db`
   (revenue by category, top customers, month-over-month trend, return
@@ -25,7 +25,7 @@ and signed off on the final report, deck, and executive summary.
   ratings vs. repeat purchase, device/country conversion, forecast with
   prediction interval, stockout risk).
 
-## Lina — Documentation & Presentation
+## Chea Lina — Documentation & Presentation
 
 - Wrote and structured the full project report, including the
   executive summary, business context, findings write-ups, limitations,
